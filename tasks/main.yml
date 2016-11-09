@@ -8,7 +8,7 @@
     body_format: json
     url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/servers?uuid={{ edge_qs_self.uUID }}&type={{ edge_qs_self.type[0] }}
 
-- name: Add to consumer groups
+- name: Add qpid to consumer groups
   uri:
     user: '{{ opdk_user_email }}'
     password: '{{ opdk_user_pass }}'
