@@ -1,0 +1,20 @@
+---
+# tasks file for /Users/carlosfrias/apigee-workspace/opdk-workspace/apigee-opdk-setup-qpid-add
+- name: Add qpid server
+  uri:
+    user: '{{ opdk_user_email }}'
+    password: '{{ opdk_user_pass }}'
+    method: POST
+    body_format: json
+    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/servers?uuid={{ edge_qs_self.uUID }}&type={{ edge_qs_self.type[0] }}
+  register: add_qpid_status
+
+- name: Add to consumer groups
+  uri:
+    user: '{{ opdk_user_email }}'
+    password: '{{ opdk_user_pass }}'
+    method: POST
+    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/consumer-groups/{{ consumer_group }}/consumers?uuid={{ edge_qs_self.uUID }}
+    body_format: json
+  register: add_consumer_groups
+
