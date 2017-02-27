@@ -13,5 +13,4 @@ galaxy_info:
   - apigee
   - opdk
 dependencies:
-  - apigee-opdk-setup-default-settings
-  - { role: apigee-opdk-server-self, server_type: 'qs'}
+  - { role: apigee-opdk-server-self, server_type: ['qs']}
