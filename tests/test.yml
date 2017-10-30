@@ -1,5 +1,11 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: qpid[0]
+  gather_facts: no
+  vars_files:
+  - ~/.apigee-secure/credentials.yml
   roles:
-    - /Users/carlosfrias/apigee-workspace/opdk-workspace/apigee-opdk-setup-qpid-add
+    - { role: apigee-opdk-setup-qpid-add,
+        ax_group: axgroup001,
+        consumer_group: consumer-group-001
+      }
+

@@ -1,18 +1,35 @@
 ---
 # tasks file for /Users/carlosfrias/apigee-workspace/opdk-workspace/apigee-opdk-setup-qpid-add
+- name: Set attributes if available
+  ignore_errors: true
+  set_fact:
+    uuid: "{{ edge_qs_self.uUID }}"
+    server_type: "{{ edge_qs_self.type[0] }}"
+
+- name: Assert that attributes are available.
+  assert:
+    that:
+      - "ax_group is defined and ax_group | trim | length > 0"
+      - "consumer_group is defined and consumer_group | trim | length > 0"
+      - "server_type is defined and server_type | trim | length > 0"
+      - "uuid is defined and uuid | trim | length > 0"
+      - "local_mgmt_ip is defined and local_mgmt_ip | trim | length > 0"
+      - "opdk_user_email is defined and opdk_user_email | trim | length > 0"
+      - "opdk_user_pass is defined and opdk_user_pass | trim | length > 0"
+    msg: "Please provide the missing attribute"
+
 - name: Add qpid server
   uri:
     user: '{{ opdk_user_email }}'
     password: '{{ opdk_user_pass }}'
     method: POST
     body_format: json
-    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/servers?uuid={{ edge_qs_self.uUID }}&type={{ edge_qs_self.type[0] }}
+    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/servers?uuid={{ uuid }}&type={{ server_type }}
 
 - name: Add qpid to consumer groups
   uri:
     user: '{{ opdk_user_email }}'
     password: '{{ opdk_user_pass }}'
     method: POST
-    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/consumer-groups/{{ consumer_group }}/consumers?uuid={{ edge_qs_self.uUID }}
     body_format: json
-
+    url: http://{{ local_mgmt_ip }}:8080/v1/analytics/groups/ax/{{ ax_group }}/consumer-groups/{{ consumer_group }}/consumers?uuid={{ uuid }}
