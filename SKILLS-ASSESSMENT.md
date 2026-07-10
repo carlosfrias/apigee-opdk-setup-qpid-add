@@ -1,6 +1,6 @@
 # Skills Assessment — apigee-opdk-setup-qpid-add
 
-> **Skill domain:** Apigee analytics topology modeling — adding a Qpid consumer to an existing analytics group (OPDK). Part of the broader Apigee platform-operations portfolio; see the [`bap_coe` portfolio hub →](https://github.com/carlosfrias/apigee-hybrid-workspace/blob/main/SKILLS-ASSESSMENT.md) for the cloud-native (Hybrid/K8s) counterpart and the full corpus.
+> **Skill domain:** Apigee analytics topology modeling — adding a Qpid consumer to an existing analytics group (OPDK). Part of the broader Apigee platform-operations portfolio; see the [`bap_coe` portfolio hub →](https://github.com/carlosfrias/apigee-hybrid-workspace/blob/master/SKILLS-ASSESSMENT.md) for the cloud-native (Hybrid/K8s) counterpart and the full corpus.
 
 ---
 
@@ -31,10 +31,10 @@ This role is the Qpid addition step in the analytics topology lifecycle. It is n
 
 | Skill | Repository | Assessment |
 |-------|-----------|-----------|
-| Analytics (axgroup) lifecycle | [`apigee-opdk-setup-analytics-group-add`](https://github.com/carlosfrias/apigee-opdk-setup-analytics-group-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-analytics-group-add/blob/main/SKILLS-ASSESSMENT.md) ✅ |
-| Postgres datastore addition | [`apigee-opdk-setup-postgres-add`](https://github.com/carlosfrias/apigee-opdk-setup-postgres-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-postgres-add/blob/main/SKILLS-ASSESSMENT.md) ✅ |
-| Scope binding (org/env) | [`apigee-opdk-setup-scopes-add`](https://github.com/carlosfrias/apigee-opdk-setup-scopes-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-scopes-add/blob/main/SKILLS-ASSESSMENT.md) ✅ |
-| Cloud-native (Hybrid/K8s) counterpart | [`apigee-hybrid-workspace`](https://github.com/carlosfrias/apigee-hybrid-workspace) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-hybrid-workspace/blob/main/SKILLS-ASSESSMENT.md) ✅ portfolio hub |
+| Analytics (axgroup) lifecycle | [`apigee-opdk-setup-analytics-group-add`](https://github.com/carlosfrias/apigee-opdk-setup-analytics-group-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-analytics-group-add/blob/master/SKILLS-ASSESSMENT.md) ✅ |
+| Postgres datastore addition | [`apigee-opdk-setup-postgres-add`](https://github.com/carlosfrias/apigee-opdk-setup-postgres-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-postgres-add/blob/master/SKILLS-ASSESSMENT.md) ✅ |
+| Scope binding (org/env) | [`apigee-opdk-setup-scopes-add`](https://github.com/carlosfrias/apigee-opdk-setup-scopes-add) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-opdk-setup-scopes-add/blob/master/SKILLS-ASSESSMENT.md) ✅ |
+| Cloud-native (Hybrid/K8s) counterpart | [`apigee-hybrid-workspace`](https://github.com/carlosfrias/apigee-hybrid-workspace) | [SKILLS-ASSESSMENT.md →](https://github.com/carlosfrias/apigee-hybrid-workspace/blob/master/SKILLS-ASSESSMENT.md) ✅ portfolio hub |
 
 ---
 
