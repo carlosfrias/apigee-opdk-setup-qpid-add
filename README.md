@@ -1,5 +1,8 @@
 # apigee-opdk-setup-qpid-add — Add a Qpid Server to an Apigee OPDK Analytics Group
 
+> 🔄 **Evolution note:** The automation approach from this OPDK-era role has been consolidated into the `apigee-hybrid-workspace` Ansible collection. See the successor capability in the portfolio hub: [`carlosfrias/apigee-hybrid-workspace`](https://github.com/carlosfrias/apigee-hybrid-workspace) → `bap_coe/private_cloud/` and `bap_coe/apigee_hybrid/`. The collection README explains each role group’s business value and production context.
+
+
 > **An Ansible role that registers a Qpid server with the Management Server and adds it to an analytics consumer group** — the Qpid step in the Apigee analytics topology lifecycle: `axgroup → consumer-group → {consumers (qpid), datastores (postgres)}`.
 
 > [!NOTE]
